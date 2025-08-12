@@ -44,9 +44,9 @@ An AI-powered agent that explains code, analyzes complexity, and helps users und
     GEMINI_API_KEY=your_api_key_here
     ```
 
-3.  **Setup Frontend:**
-    ```sh
-    cd ../frontend
+3.  **Setup :**
+    ```
+    cd Agent
     pnpm install
     ```
 
@@ -56,5 +56,6 @@ An AI-powered agent that explains code, analyzes complexity, and helps users und
 
 ---
 ## 📄 License
+
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
