@@ -269,18 +269,20 @@ export default function ExplainerPage() {
             <CardHeader className="pb-2">
               <CardTitle className="text-base">Repository files</CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="p-0">
               {loadingTree ? (
-                <div className="flex items-center gap-2 text-muted-foreground text-sm">
+                <div className="flex items-center gap-2 text-muted-foreground text-sm p-4">
                   <Loader2 className="size-4 animate-spin" />
                   Loading file tree...
                 </div>
               ) : tree ? (
-                <ScrollArea className="h-[40vh] pr-2">
-                  <FileTree nodes={tree} onSelectFile={handleSelectFile} selectedPath={selectedPath || undefined} />
-                </ScrollArea>
+                <div className="h-[50vh] overflow-y-auto border-t">
+                  <div className="p-4">
+                    <FileTree nodes={tree} onSelectFile={handleSelectFile} selectedPath={selectedPath || undefined} />
+                  </div>
+                </div>
               ) : (
-                <p className="text-sm text-muted-foreground">Load a repository to browse files.</p>
+                <p className="text-sm text-muted-foreground p-4">Load a repository to browse files.</p>
               )}
             </CardContent>
           </Card>
@@ -299,7 +301,7 @@ export default function ExplainerPage() {
           <Collapsible open={expOpenMobile} onOpenChange={setExpOpenMobile}>
             <Card className="border-blue-200/40 dark:border-blue-900/30">
               <CardHeader className="pb-2 flex items-center justify-between">
-                <CardTitle className="text-base">Explanation</CardTitle>
+                <CardTitle className="text-base">Code Explanation</CardTitle>
                 <CollapsibleTrigger asChild>
                   <Button variant="ghost" size="sm" className="flex items-center gap-1">
                     <ChevronDown
@@ -344,7 +346,7 @@ export default function ExplainerPage() {
                     </a>
                   )}
                 </div>
-                <div className="flex-1">
+                <div className="flex-1 min-h-0">
                   {loadingTree ? (
                     <div className="h-full grid place-items-center text-muted-foreground">
                       <div className="flex items-center gap-2">
@@ -353,8 +355,14 @@ export default function ExplainerPage() {
                       </div>
                     </div>
                   ) : tree ? (
-                    <ScrollArea className="h-full p-2 pr-3">
-                      <FileTree nodes={tree} onSelectFile={handleSelectFile} selectedPath={selectedPath || undefined} />
+                    <ScrollArea className="h-full">
+                      <div className="p-2 pr-4">
+                        <FileTree
+                          nodes={tree}
+                          onSelectFile={handleSelectFile}
+                          selectedPath={selectedPath || undefined}
+                        />
+                      </div>
                     </ScrollArea>
                   ) : (
                     <div className="h-full grid place-items-center text-muted-foreground text-sm p-4 text-center">
@@ -410,7 +418,7 @@ export default function ExplainerPage() {
               <CardHeader className="pb-2 flex items-center justify-between">
                 <CardTitle className="text-base flex items-center gap-2">
                   <Search className="size-4 text-violet-600 dark:text-violet-400" />
-                  Explanation
+                  Code Explanation
                 </CardTitle>
                 <div className="flex items-center gap-2">
                   {code && (
