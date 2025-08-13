@@ -31,31 +31,26 @@ An AI-powered agent that explains code, analyzes complexity, and helps users und
 1.  **Clone the repository:**
     ```sh
     git clone [https://github.com/your-username/CodeExplainerAgent.git](https://github.com/your-username/CodeExplainerAgent.git)
-    cd CodeExplainerAgent
+    cd Agent
     ```
 
 2.  **Setup Backend:**
     ```sh
-    cd backend
+    cd Agent
     pnpm install
     ```
     Create a `.env` file and add your API key:
     ```
-    GEMINI_API_KEY=your_api_key_here
+    GITHUB_TOKEN=your_github_token
+    GOOGLE_GENERATIVE_AI_API_KEY=your_api_key_here
     ```
 
-3.  **Setup :**
-    ```
-    cd Agent
-    pnpm install
-    ```
-
-4.  **Run the application:**
-    * Start the backend server: `pnpm dev` in the `backend` directory.
-    * Start the frontend server: `pnpm dev` in the `frontend` directory.
+3.  **Run the application:**
+    * Start the backend server: `pnpm dev` in the `Agent` directory.
 
 ---
 ## 📄 License
 
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
