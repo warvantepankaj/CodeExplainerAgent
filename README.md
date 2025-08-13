@@ -25,6 +25,7 @@ An AI-powered agent that explains code, analyzes complexity, and helps users und
 * Node.js (v18 or later)
 * PNPM
 * A Google Gemini API Key (get one from [Google AI Studio](https://aistudio.google.com/app/apikey))
+* A GithHub Token (get one at [Github](https://github.com/settings/personal-access-tokens))
 
 ### Installation & Setup
 
@@ -53,4 +54,5 @@ An AI-powered agent that explains code, analyzes complexity, and helps users und
 
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
 
