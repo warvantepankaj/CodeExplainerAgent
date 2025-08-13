@@ -38,6 +38,7 @@ An AI-powered agent that explains code, analyzes complexity, and helps users und
 2.  **Setup Backend:**
     ```sh
     cd Agent
+    npm install -g pnpm
     pnpm install
     ```
     Create a `.env` file and add your API key:
@@ -54,5 +55,6 @@ An AI-powered agent that explains code, analyzes complexity, and helps users und
 
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
 
 
